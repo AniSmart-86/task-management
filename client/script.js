@@ -311,7 +311,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     try {
       // Get token from localStorage
       const Usertoken = localStorage.getItem("token");
-  
+
+
+       if (!Usertoken) {
+        console.log("No user token found. Redirecting to login...");
+        window.location.href = "/login.html";
+        return;
+      }
   
       // Fetch user data
       const response = await fetch(`${apiBaseURL}/get-profile`, {
