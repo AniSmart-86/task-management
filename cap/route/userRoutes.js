@@ -14,8 +14,8 @@ userRoute.get('/get-profile', authUser, getProfile)
 // userRoute.post('/update',updateProfile)
 
 // Task Routes
-userRoute.post('/create', createTask)
-userRoute.get('/get-alltask', getAllTasks)
+userRoute.post('/create',authUser, createTask)
+userRoute.get('/get-alltask',authUser, getAllTasks)
 userRoute.get('/get-task/:id', getTaskById)
 userRoute.put('/update/:id', updateTask)
 userRoute.delete('/delete/:id', deleteTask)
