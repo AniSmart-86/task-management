@@ -24,7 +24,7 @@ form.addEventListener('submit', async (event) => {
             responseMessage.style.color = '#4CAF50';
            
             localStorage.setItem('token', data.token)
-            window.location.href = '/client/index.html'; 
+            window.location.href = '/index.html'; 
         } else {
             responseMessage.textContent = `Error: ${data.message || 'Registration failed'}`;
         }
