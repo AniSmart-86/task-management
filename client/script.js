@@ -319,7 +319,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
   
       // Fetch user data
-      const response = await fetch('https://task-management-api-cmcy.onrender.com/api/user/get-profile', {
+      const response = await fetch(`${apiBaseURL}/get-profile`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
