@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task master</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Navbar -->
+<header>
+    
+    <h1>TASK-MASTER</h1>
+    
+    <nav>
+            <p id="username"></p>
+            <a style="display: none;" id="LogInBtn" href="login.html"> LOGIN</a>
+            <a id="LogoutBtn" href="login.html">LOG OUT</a>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Form for creating or updating tasks -->
+        <section>
+          <form id="taskForm">
+            <input type="text" id="taskTitle" placeholder="Task Title" >
+            <textarea id="taskDescription" placeholder="Task Description"></textarea>
+            <input type="date" id="taskDeadline" required>
+            <select id="taskPriority" required>
+              <option value="" disabled selected>select priority</option>
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+            <button type="submit">Add Task</button>
+          </form>
+        </section>
+    
+        <!-- Filters for tasks -->
+        <section>
+          <label for="filterPriority">Filter By Priority:</label>
+          <select id="filterPriority">
+            <option value="">All</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+    
+          <label for="filterDate">Filter By Deadline:</label>
+          <input type="date" id="filterDate">
+          <button id="applyFilters">Filter</button>
+        </section>
+    
+        <!-- Search tasks -->
+        <section>
+          <input type="text" id="searchBar" placeholder="Search by title or description">
+        </section>
+    <hr>
+        <!-- Section to display all tasks -->
+        <section id="task-heading">
+          <h2>List Of Tasks</h2>
+          
+          <ul id="taskList"></ul>
+        </section>
+      </main>
+
+
+    <script src="script.js" defer></script>
+</body>
+</html>

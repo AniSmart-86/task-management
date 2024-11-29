@@ -1,0 +1,368 @@
+body {
+ font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #f0f0f0;
+    overflow: auto;
+}
+
+
+header{
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #4CAF50;
+    z-index: 999;
+    box-shadow: 5px 10px 10px 2px #666;
+
+}
+
+header h1{
+  font-size: 16px;
+  font-weight: 800;
+  color: #fff;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+nav p{
+    margin: 20px;
+    color: #ccc;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+nav a{
+    background-color: #007bff;
+    padding: 8px 20px 8px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    color: #ccc;
+    border: none;
+    font-size: 12px;
+    box-shadow: 5px 10px 10px 2px #231d56;
+    transition: 1s ease-in-out;
+}
+
+nav a:hover{
+transform: scaleX(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+ 
+  
+  
+  
+  /* Main Layout */
+  main {
+
+
+    width: 90%;
+    margin: 100px auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    /*margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  }
+  
+  section {
+    margin-bottom: 30px;
+  }
+  
+  section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #444;
+  }
+  
+  /* Form Styling */
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  form input,
+  form textarea,
+  form select,
+  form button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline-color: #4cae4c;
+  }
+  
+  form textarea {
+    height: 200px;
+    resize: none;
+  }
+  
+  form button {
+    background-color: #5cb85c;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #4cae4c;
+  }
+  
+  /* Filters Section */
+  label {
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  #filterPriority{
+    padding: 8px 25px 8px 25px;
+    margin-bottom: 10px;
+  }
+
+  #filterDate{
+    padding: 8px 25px 8px 25px;
+  }
+
+  #task-heading h2{
+    text-align: center;
+    color: #444;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding-top: 20px;
+  }
+
+  
+  .title2{
+    padding-top: 10px;
+  }
+
+  .decs{
+    font-size: 12px !important;
+  }
+
+
+
+  .deadline{
+    padding-bottom: 15px;
+  }
+
+  #applyFilters {
+    /* margin-top: 5px; */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  #applyFilters:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Task List */
+  #taskList {
+    list-style: none;
+    margin-top: 20px;
+    padding: 0;
+  }
+  
+  #taskList li {
+    background: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  #taskList li h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+  
+  #taskList li p {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+  
+  #taskList li button {
+    padding: 7px 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  #taskList li button:first-of-type {
+    background-color: #d9534f;
+    color: white;
+  }
+  
+  #taskList li button:first-of-type:hover {
+    background-color: #c9302c;
+  }
+  
+  #taskList li button:last-of-type {
+    background-color: #5bc0de;
+    color: white;
+  }
+  
+  #taskList li button:last-of-type:hover {
+    background-color: #31b0d5;
+  }
+  
+  /* Search Bar */
+  #searchBar {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    outline-color: #4cae4c;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    form input,
+    form textarea,
+    form select,
+    form button {
+      width: 100%;
+    }
+
+    header h1{
+        font-size: 10px;
+        font-weight: 400;
+       
+      }
+
+      nav a {
+      
+        border-radius: 5px;
+        color: #ccc;
+        border: none;
+        font-size: 10px;
+       
+    }
+
+    #filterPriority {
+        padding: 8px 25px 8px 25px;
+        margin-bottom: 20px;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+@media (max-width: 720px){
+    .task-list ul {
+        flex-direction: column;
+       
+        padding: 0;
+        margin: 0;
+    }
+
+    .task-list li {
+        width: 95%;
+        margin-bottom: 10;
+        padding: 0;
+    }
+
+    .filter-search {
+      flex-direction: column;
+      
+    }
+
+    .filter-search input {
+        width: 100%;
+        border-radius: 20px;
+       
+    }
+
+    .filter-search select {
+        width: 80%;
+       margin-top: 20px;
+       align-self: flex-start;
+    }
+
+    .add-task button {
+        width: 30%;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+       
+    }
+
+    .add-task input {
+        width: 80%;
+        height: 28px;
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #ccc;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+       
+        outline-color: #4CAF50;
+    }
+   
+} */
