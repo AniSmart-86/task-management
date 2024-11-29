@@ -14,7 +14,7 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(cors({
-  origin: ['https://task-master-two-henna.vercel.app'],
+  origin: ['https://task-master-two-sigma.vercel.app'],
   credentials: true,
   methods: ['POST', 'GET', 'DELETE', 'PUT'],
   allowedHeaders: ['content-Type', 'AUthorization', 'token'],
