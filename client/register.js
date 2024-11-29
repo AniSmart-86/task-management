@@ -7,9 +7,10 @@ form.addEventListener('submit', async (event) => {
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
+     const API_URL = "https://task-management-api-cmcy.onrender.com/api/user";
 
     try {
-        const response = await fetch('https://task-management-api-cmcy.onrender.com/api/user/register', {
+        const response = await fetch(`${API_URL}/register`, {
             method: 'POST', // HTTP method
             headers: {
                 'Content-Type': 'application/json', // Inform backend to expect JSON
