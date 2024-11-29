@@ -1,6 +1,6 @@
 
 
-const apiBaseURL = "http://localhost:4000/api/user"; 
+const apiBaseURL = "https://task-management-api-cmcy.onrender.com/api/user"; 
 
 
 const taskForm = document.getElementById("taskForm");
@@ -319,7 +319,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
   
       // Fetch user data
-      const response = await fetch('http://localhost:4000/api/user/get-profile', {
+      const response = await fetch('https://task-management-api-cmcy.onrender.com/api/user/get-profile', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
