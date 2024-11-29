@@ -314,7 +314,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   
       if (!Usertoken) {
         console.log("No user token found. Redirecting to login...");
-        window.location.href = "/client/login.html";
+        window.location.href = "/login.html";
         return;
       }
   
