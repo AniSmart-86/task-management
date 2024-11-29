@@ -6,9 +6,9 @@ form.addEventListener('submit', async (event) => {
 
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
-    const API_URL = 'https://task-management-api-cmcy.onrender.com'
+    const API_URL = "https://task-management-api-cmcy.onrender.com/api/user";
     try {
-        const response = await fetch('https://task-management-api-cmcy.onrender.com/api/user/login', {
+        const response = await fetch(`${API_URL}/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
