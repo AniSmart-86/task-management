@@ -7,7 +7,7 @@ const taskSchema = new mongoose.Schema(
   description: { type: String },
   deadline: { type: Date, required: true }, // Add deadline field
   priority: { type: String, enum: ["low", "medium", "high"], required: true }, // Add priority field
-  createdAt: { type: Date, default: Date.now },
+  createdBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
     },
    
 );
