@@ -7,7 +7,7 @@ form.addEventListener('submit', async (event) => {
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
-     const API_URL = "https://task-management-api-cmcy.onrender.com/api/user";
+     const API_URL = "https://task-master-api-i3bb.onrender.com/api/user";
 
     try {
         const response = await fetch(`${API_URL}/register`, {
