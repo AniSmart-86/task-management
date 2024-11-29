@@ -21,7 +21,7 @@ form.addEventListener('submit', async (event) => {
             responseMessage.textContent = `Success: ${data.message}`;
             responseMessage.style.color = '#4CAF50';
       
-            window.location.href = '/client/index.html';
+            window.location.href = '/index.html';
             localStorage.setItem('token', data.token);
         } else {
             responseMessage.textContent = `Error: ${data.message}`;
